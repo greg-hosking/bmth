@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+	/* Set the font for every element */
+	font-family: 'Antonio', sans-serif;
+}
+
+/* Clearfix */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header {
+	background: black;
+	border-bottom: 3px solid whitesmoke;
+	color: whitesmoke;
+}
+/* Float the logo image to the left of the main heading */
+header img {
+	float: left;
+	max-width: 150px;
+	min-width: 125px;
+	padding-right: 2.5em;
+	width: 100%;
+}
+header h1 {
+	padding: 0.6em 0 1em 0;
+	font-size: 300%;
+}
+
+nav {
+	background: black;
+	border-bottom: 3px solid whitesmoke;
+	color: whitesmoke;
+}
+
+/* Set the background of every page to an off-white */
+#content-container {
+	background: whitesmoke;
+}
+
+/* Give each article a black background, a subtle shadow, and some spacing */
+article {
+	background: black;
+	box-shadow: 0 0 15px black;
+	color: whitesmoke;
+	margin-bottom: 3em;
+	padding: 1.5em;
+}
+article h1 {
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid whitesmoke;
+}
+article h2 {
+	padding-bottom: 0.25em;
+}
+
+/* Set the image carousel to have a thin, off-white border */
+.carousel {
+    border: 2px solid whitesmoke;
+}
+/* Normalize the carousel images */
+.carousel-item img {
+    width: auto;
+    height: 450px;
+    max-height: 450px;
+}
+/* Set the carousel captions to be centered with a thin, off-white border and transparent background */
+.carousel-caption {
+    margin: 0 auto;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(245, 245, 245, 0.85);
+}
+
+/* Set the album/video wrappers to have a thin off-white border and the correct position and spacing */
+.album-wrapper, .video-wrapper {
+	border: 2px solid whitesmoke;
+	height: 0;
+	margin: 0 auto;
+	padding-top: 25px;
+	position: relative;
+}
+.album-wrapper img, .video-wrapper iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.album-wrapper {
+    padding-bottom: 80%;
+}
+.video-wrapper {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* Set the caption to have a light gray color and a bit of top padding */
+.album-caption, .video-caption {
+    padding-top: 0.75em;
+	color: gainsboro;
+}
+.album-caption h4 {
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid gainsboro;
+}
+.album-caption h5, #home-article h5 {
+    line-height: 1.4;
+    padding-bottom: 0.75em;
+    color: gainsboro;
+}
+.album-caption li {
+    margin-left: 1.5em;
+    padding-top: 0.25em;
+}
+
+/* Remove the bottom border and margin from the last video and album */
+#video-10, #album-9 {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+footer {
+	background: black;
+	border-top: 3px solid whitesmoke;
+	color: whitesmoke;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	/* Center the logo image above the main heading */
+	header img {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		max-width: 60%;
+		padding: 1em 0;
+		width: 25%;
+	}
+	/* Center the main heading and remove its padding */
+	header h1 {
+		padding: 0;
+		text-align: center;
+	}
+
+	#content-container {
+		width: 100%;
+	}
+
+    article {
+        border-bottom: 3px solid whitesmoke;
+        margin-bottom: 0;
+    }
+
+    /* Normalize the carousel images */
+    .carousel-item img {
+        width: auto;
+        height: 350px;
+        max-height: 350px;
+    }
+} 
