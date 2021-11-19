@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Head -->
+
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -17,11 +18,11 @@
 	<![endif]-->
 
   <!-- Title and Favicon -->
-  <title>{% block title %}{% endblock %} | Bring Me The Horizon</title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <title>Images | Bring Me The Horizon</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
 
   <!-- Link to main.css -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+  <link rel="stylesheet" href="styles/main.css">
 
   <!-- Link to Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,10 +36,11 @@
 </head>
 
 <!-- Body -->
+
 <body style="background: whitesmoke;">
   <!-- Header -->
   <header class="clearfix p-5">
-    <a href="/"><img src="{{ url_for('static', filename='images/logo.jpg') }}"></a>
+    <a href="/"><img src="images/logo.jpg"></a>
     <h1>Bring Me The Horizon</h1>
   </header>
 
@@ -50,15 +52,45 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav nav-fill w-100 h3">
-        {% block nav_links %}
-        {% endblock %}
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/albums.html">Albums</a></li>
+        <li class="nav-item"><a class="nav-link" href="/videos.html">Videos</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/images.html">Images</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="mx-lg-5 mx-md-5 mx-sm-0 py-lg-5 py-md-5 py-sm-0 px-lg-3 px-md-3 px-sm-0" id="content-container">
-    {% block content %}
-    {% endblock %}
+
+    <!-- Image Gallery -->
+    <div class="row">
+      <!-- Column 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <img src="images/gallery/1.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/2.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/3.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/4.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/5.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/6.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+      </div>
+      <!-- Column 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <img src="images/gallery/7.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/8.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/9.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/10.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/11.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/12.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+      </div>
+      <!-- Column 3 (not displayed on medium screens)-->
+      <div class="col-lg-4 col-md-6 col-sm-12 d-lg-block d-md-none">
+        <img src="images/gallery/13.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/14.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/15.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/16.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+        <img src="images/gallery/17.jpg" class="w-100 rounded mb-lg-4 mb-md-4 mb-sm-0">
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -85,4 +117,5 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
